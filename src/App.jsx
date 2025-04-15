@@ -96,13 +96,13 @@ const Portfolio = () => {
 
           <Container>
             {/* About Me Section */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="pt-8 pb-16 relative"
             >
               <AboutSection data={intro} />
-            </motion.div>
+            </motion.div> */}
 
             {/* Only show sub-navigation if there are available sections */}
             {availableSections.length > 0 && (
