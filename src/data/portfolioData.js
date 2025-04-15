@@ -124,4 +124,22 @@ export const socialLinks = [
   }
 ];
 
-
+export const projects = [
+  {
+    title: "My CV",
+    technologies: ["React","tailwind CSS"],
+    description: "A showcase of my skills and experiences",
+    // results: "-",
+    link: "https://github.com/atlno1fan/MyCV",
+    media: [
+      // {
+      //   type: "image",
+      //   url: "/api/placeholder/800/600",
+      // },
+      // {
+      //   type: "video",
+      //   url: "path-to-video.mp4",
+      // },
+    ],
+  }
+];
