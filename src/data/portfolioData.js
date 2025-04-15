@@ -124,39 +124,4 @@ export const socialLinks = [
   }
 ];
 
-export const projects = [
-  {
-    title: "Project Name",
-    technologies: ["React", "Node.js", "MongoDB"],
-    description: "A detailed description of the project, its features, and implementation details...",
-    results: "Achieved X% improvement in Y, serving Z users per month...",
-    link: "https://github.com/username/project",
-    media: [
-      {
-        type: "image",
-        url: "/api/placeholder/800/600",
-      },
-      {
-        type: "video",
-        url: "path-to-video.mp4",
-      },
-    ],
-  },
-  {
-    title: "Project Name",
-    technologies: ["React", "Node.js", "MongoDB"],
-    description: "A detailed description of the project, its features, and implementation details...",
-    results: "Achieved X% improvement in Y, serving Z users per month...",
-    link: "https://github.com/username/project",
-    media: [
-      {
-        type: "image",
-        url: "/api/placeholder/800/600",
-      },
-      {
-        type: "video",
-        url: "path-to-video.mp4",
-      },
-    ],
-  }
-];
+
