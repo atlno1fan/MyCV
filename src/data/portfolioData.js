@@ -27,18 +27,19 @@ export const skills = [
   { name: 'Python', category: 'Languages' },
   { name: 'C#', category: 'Languages' },
   { name: 'Java', category: 'Languages' },
-  { name: 'C', category: 'Languages' },
-  { name: 'C++', category: 'Languages' },
-  { name: 'Prolog', category: 'Languages' },
-  { name: 'PHP', category: 'Languages' },
   { name: 'JavaScript', category: 'Languages' },
   { name: 'TypeScript', category: 'Languages' },
   { name: 'HTML5', category: 'Languages' },
   { name: 'CSS', category: 'Languages' },
   { name: 'MySQL', category: 'Languages' },
   { name: 'NoSQL', category: 'Languages' },
+  { name: 'C', category: 'Languages' },
+  { name: 'C++', category: 'Languages' },
+  { name: 'Prolog', category: 'Languages' },
+  { name: 'PHP', category: 'Languages' },
   { name: 'ReactJS', category: 'Frameworks' },
   { name: 'NextJS', category: 'Frameworks' },
+  { name: 'Tailwind CSS', category: 'Languages' },
   { name: 'PyTorch', category: 'Frameworks' },
   { name: 'TensorFlow', category: 'Frameworks' },
   { name: 'Keras', category: 'Frameworks' },
@@ -57,7 +58,7 @@ export const skills = [
   { name: 'Matlab', category: 'Tools' },
   { name: 'Android Studio', category: 'Tools' },
   { name: 'Adobe Photoshop', category: 'Tools' },
-  { name: 'Adobe XD', category: 'Tools' }
+  { name: 'Adobe XD', category: 'Tools' },
 ];
 
 export const experiences = [
