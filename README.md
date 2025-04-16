@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# MyCV
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive CV/portfolio website showcasing my professional experience, skills, and education as a Software Engineer & Data Scientist.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Professional Profile** - Comprehensive overview of my background, skills, and experience
+- **Responsive Design** - Optimized for all devices from mobile to desktop
+- **Interactive UI** - Built with React for a smooth user experience
+- **Skills Categorization** - Technologies organized by category (Languages, Frameworks, Cloud, Tools)
+- **Detailed Experience** - Timeline showcasing professional journey and projects
+- **Education History** - Academic qualifications with relevant details
+- **Social Links** - Direct connections to GitHub, LinkedIn, and Email
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React.js** - Frontend framework
+- **Tailwind CSS** - Utility-first CSS framework
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+```
+📦 MyCV
+ ┣ 📂 public
+ ┃ ┣ 📜 favicon.ico
+ ┃ ┣ 📜 index.html
+ ┃ ┣ 📜 logo192.png
+ ┃ ┣ 📜 logo512.png
+ ┃ ┣ 📜 manifest.json
+ ┃ ┗ 📜 robots.txt
+ ┣ 📂 src
+ ┃ ┣ 📂 assets
+ ┃ ┃ ┗ 📂 Images
+ ┃ ┃   ┗ 📜 profile.jpg
+ ┃ ┣ 📂 components
+ ┃ ┃ ┣ 📂 Animation
+ ┃ ┃ ┃ ┣ 📜 BaseAnimation.jsx
+ ┃ ┃ ┃ ┗ 📜 FadeIn.jsx
+ ┃ ┃ ┣ 📂 Base
+ ┃ ┃ ┃ ┗ 📜 Container.jsx
+ ┃ ┃ ┣ 📂 Cards
+ ┃ ┃ ┃ ┣ 📜 BaseCard.jsx
+ ┃ ┃ ┃ ┣ 📜 EducationCard.jsx
+ ┃ ┃ ┃ ┣ 📜 ExperienceCard.jsx
+ ┃ ┃ ┃ ┣ 📜 ProjectCard.jsx
+ ┃ ┃ ┃ ┗ 📜 SkillCard.jsx
+ ┃ ┃ ┣ 📂 Common
+ ┃ ┃ ┃ ┣ 📜 IconWrapper.jsx
+ ┃ ┃ ┃ ┗ 📜 Tag.jsx
+ ┃ ┃ ┣ 📂 Layout
+ ┃ ┃ ┃ ┣ 📜 Layout.jsx
+ ┃ ┃ ┃ ┗ 📜 Section.jsx
+ ┃ ┃ ┣ 📂 Navigation
+ ┃ ┃ ┃ ┗ 📜 NavItem.jsx
+ ┃ ┃ ┗ 📂 Sections
+ ┃ ┃   ┣ 📜 About.jsx
+ ┃ ┃   ┗ 📜 Hero.jsx
+ ┃ ┣ 📂 UI
+ ┃ ┃ ┗ 📜 SectionTitle.jsx
+ ┃ ┣ 📂 data
+ ┃ ┃ ┗ 📜 portfolioData.js
+ ┃ ┣ 📜 App.css
+ ┃ ┣ 📜 App.jsx
+ ┃ ┣ 📜 index.css
+ ┃ ┣ 📜 index.js
+ ┃ ┣ 📜 logo.svg
+ ┃ ┣ 📜 output.css
+ ┃ ┣ 📜 reportWebVitals.js
+ ┃ ┗ 📜 setupTests.js
+ ┣ 📜 .gitignore
+ ┣ 📜 package-lock.json
+ ┣ 📜 package.json
+ ┣ 📜 postcss.config.js
+ ┣ 📜 README.md
+ ┗ 📜 tailwind.config.js
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Customization
 
-### `npm run build`
+The website data is centralized in `src/data/portfolioData.js` for easy updates:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Personal Information** - Update the `intro` object
+- **Skills** - Modify the `skills` array
+- **Experience** - Edit the `experiences` array
+- **Education** - Update the `education` array
+- **Social Links** - Adjust the `socialLinks` array
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contact
 
-### `npm run eject`
+Yomna Salem - [yomnasalem01@gmail.com](mailto:yomnasalem01@gmail.com)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Project Link: [https://github.com/atlno1fan/MyCV](https://github.com/atlno1fan/MyCV)
