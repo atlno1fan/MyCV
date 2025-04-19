@@ -66,33 +66,7 @@ const Portfolio = () => {
         />
         
         <div className="bg-zinc-900 relative">
-          {/* Decorative Elements */}
-          <motion.div 
-            className="absolute top-0 right-0 w-96 h-96 bg-violet-500/10 rounded-full blur-3xl"
-            animate={{
-              x: [0, 50, 0],
-              y: [0, 30, 0],
-              scale: [1, 1.1, 1],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              repeatType: "reverse"
-            }}
-          />
-          <motion.div 
-            className="absolute bottom-0 left-0 w-96 h-96 bg-violet-400/10 rounded-full blur-3xl"
-            animate={{
-              x: [0, -50, 0],
-              y: [0, -30, 0],
-              scale: [1, 1.2, 1],
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              repeatType: "reverse"
-            }}
-          />
+         
 
           <Container>
             {/* About Me Section */}
