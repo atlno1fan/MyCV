@@ -2,16 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Design tokens. The light palette is the default; the dark one follows the visitor's
+   system preference. Components only ever use the token names (see tailwind.config.ts). */
+:root {
+  color-scheme: light;
+  --c-surface: 250 250 248;
+  --c-surface-2: 243 244 241;
+  --c-ink: 21 30 27;
+  --c-ink-2: 63 76 71;
+  --c-muted: 106 118 113;
+  --c-line: 221 226 223;
+  --c-accent: 11 105 105;
+  --c-accent-strong: 8 85 85;
+  --c-accent-ink: 255 255 255;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --c-surface: 16 21 19;
+    --c-surface-2: 24 31 28;
+    --c-ink: 233 237 235;
+    --c-ink-2: 188 198 193;
+    --c-muted: 140 153 147;
+    --c-line: 44 54 50;
+    --c-accent: 92 190 186;
+    --c-accent-strong: 118 205 201;
+    --c-accent-ink: 16 21 19;
+  }
+}
+
+/* Anchor navigation glides between sections unless the visitor prefers reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-surface font-sans text-ink antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-md px-4 py-2.5 text-sm font-medium transition-colors;
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface;
+  }
+  .btn-primary {
+    @apply bg-accent text-accent-ink hover:bg-accent-strong;
+  }
+  .btn-secondary {
+    @apply border border-line text-ink hover:border-ink-2;
+  }
+
+  /* Content fades in as it scrolls into view; no motion at all when the visitor asks for none. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease;
+  }
+  .reveal.is-shown {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* The section links scroll sideways on narrow screens without showing a scrollbar. */
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
 }

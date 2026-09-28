@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Yomna Salem CV (one page)</title>
+<style>
+  @page { size: A4; margin: 10mm 12mm 10mm 12mm; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif; color: #18181b; font-size: 8.6pt; line-height: 1.3; }
+  a { color: inherit; text-decoration: none; }
+  header { border-bottom: 2px solid #6d28d9; padding-bottom: 6pt; margin-bottom: 8pt; }
+  h1 { font-size: 22pt; margin: 0; letter-spacing: -0.01em; color: #4c1d95; }
+  .role { font-size: 12pt; font-weight: 600; margin: 2pt 0 4pt; }
+  .contact { display: flex; flex-wrap: wrap; gap: 4pt 14pt; font-size: 9pt; color: #3f3f46; }
+  h2 { font-size: 10.5pt; text-transform: uppercase; letter-spacing: 0.08em; color: #6d28d9; margin: 11pt 0 4pt; padding-bottom: 2pt; border-bottom: 1px solid #e4e4e7; break-after: avoid; }
+  p { margin: 0 0 4pt; }
+  .job { margin-bottom: 7pt; break-inside: avoid; }
+  .job-head { display: flex; justify-content: space-between; gap: 12pt; align-items: baseline; }
+  .job-head b { font-size: 10.2pt; }
+  .job-head span { color: #52525b; font-size: 9pt; white-space: nowrap; }
+  .org { color: #52525b; margin-bottom: 2pt; }
+  ul { margin: 0; padding-left: 12pt; }
+  li { margin: 0 0 2pt; }
+  .proj { margin-bottom: 5pt; break-inside: avoid; }
+  .proj b { display: block; }
+  .proj .res { color: #3f3f46; }
+  .skills { display: grid; grid-template-columns: 150pt 1fr; gap: 2.5pt 10pt; }
+  .skills dt { font-weight: 600; }
+  .skills dd { margin: 0; color: #27272a; }
+  .skills .more { color: #71717a; }
+  .edu { display: flex; justify-content: space-between; gap: 12pt; margin-bottom: 4pt; break-inside: avoid; }
+  .edu span { color: #52525b; font-size: 9pt; white-space: nowrap; }
+  .edu small { display: block; color: #52525b; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Yomna Salem</h1>
+  <div class="role">Lead AI and Machine Learning Software Engineer</div>
+  <div class="contact">
+    <a href="mailto:yomnasalem01@gmail.com">yomnasalem01@gmail.com</a>
+    <a href="https://github.com/atlno1fan">github.com/atlno1fan</a>
+    <a href="https://linkedin.com/in/yomna-salem-8a0305141">linkedin.com/in/yomna-salem-8a0305141</a>
+    <a href="https://atlno1fan.github.io/MyCV/">atlno1fan.github.io/MyCV</a>
+  </div>
+</header>
+
+<h2>Profile</h2>
+<p>I build AI agents and the platforms behind them: voice and messaging agents, backends, consoles and AWS infrastructure. In the past year I built two AI products from scratch, one for car dealerships and one for hotels, led their move onto one production platform on AWS, and set up the system my team plans and reviews its work in. 4,000+ commits across 29 repositories; 38 sales traced back to an AI agent I built; 3 production platforms on AWS. Open to lead and senior roles in AI engineering, full-stack engineering and technical project management, on site or remote.</p>
+
+<h2>Experience</h2>
+<div class="job">
+  <div class="job-head"><b>Lead AI and Machine Learning Software Engineer</b><span>Jul 2025 to present</span></div>
+  <div class="org">Revamply</div>
+  <ul>
+    <li>Built an AI sales-agent backend for car dealerships from the first commit into a production platform: voice, SMS, email, web chat and Facebook Marketplace agents, 485 API routes, 49 agent tools; 87% of the codebase across about 960 merged pull requests.</li>
+    <li>Verified results at a franchise dealership in seven weeks: 1,962 leads, 464 real conversations, 65 appointments booked by the AI and 38 sales confirmed against the dealer's records; 2-second median reply against the dealer's 93-hour first contact.</li>
+    <li>Led the merge of two dealership products into one AWS platform: 119 of 119 modules and 269 endpoints ported in about five days, 156 tables moved. Designed and ran production AWS for three products in Terraform with CI/CD on GitHub Actions; raised tests from 0 to 1,687 in eight weeks.</li>
+    <li>Built a hotel guest voice agent and evolved it into a hotel operations platform: Maestro PMS certification, Oracle OHIP and Silverware POS integrations, real-time PMS ingestion, automated deposit enforcement, a housekeeping system with a staff phone app, and a read-only gate on every PMS write.</li>
+    <li>Built truthfulness guards validated on 13,765 real replies, closed cross-tenant and identity gaps, added row-level security and TCPA/A2P consent, and switched on AWS account controls toward SOC 2 readiness.</li>
+    <li>Ran releases and standards for a team of four (237 production promotions, test plans across 67 modules), built the team's work-management system with an MCP server, owned vendor certification and client requirements, and briefed leadership with audits and cost models.</li>
+  </ul>
+</div>
+<div class="job">
+  <div class="job-head"><b>Software Engineer, Outlier</b><span>Aug 2024 to present, project-based</span></div>
+  <ul><li>Human feedback for generative AI models; assessed and revised AI-generated code in Python, JavaScript and TypeScript.</li></ul>
+</div>
+<div class="job">
+  <div class="job-head"><b>Software Engineer, Institute of Tourism Research and Innovation, UNIMAS</b><span>Jan 2020 to Jun 2022</span></div>
+  <ul><li>Built the AR treasure-hunt game and several screens of a state tourism board's Android app (Unity, Java; 1,000+ Google Play downloads); led a team of three to deliver a 46-building campus tour-guide app in two weeks; built 15+ pages of a React and Node stock-fulfilment platform.</li></ul>
+</div>
+
+<h2>Education</h2>
+<div class="edu"><div><b>MSc in Data Science and Artificial Intelligence</b>, Queen's University, GPA 4.02/4.5. Thesis: Words-Digest, a RAG summariser for ChatGPT prompts (team lead; 97.93% less context at 79.27% accuracy).</div><span>2023 to 2024</span></div>
+<div class="edu"><div><b>BSc (Hons) Computer Science, Software Engineering</b>, University Malaysia Sarawak, GPA 3.45/4.0.</div><span>2017 to 2021</span></div>
+<p><b>Certifications:</b> AWS Certified Cloud Practitioner (2023 to 2029); Microsoft Certified: Azure Data Scientist Associate (2022 to 2027); Huawei HCIA-AI (2022); Altair RapidMiner professional certifications in Machine Learning, Data Engineering, and Applications and Use Cases (2020). <b>Languages:</b> English (near-native, TOEFL iBT 110), Arabic (native).</p>
+
+<h2>Technical skills</h2>
+<dl class="skills">
+  <dt>AI and agents</dt><dd>OpenAI (Realtime voice, GPT), Anthropic Claude, real-time voice agents, RAG and vector search (Pinecone), agent tools, guardrails and evaluation, MCP, ElevenLabs, Deepgram, LangChain</dd>
+  <dt>Backend and data</dt><dd>Python, FastAPI, SQLAlchemy, Alembic, PostgreSQL, SQL, pytest, .NET, PyTorch, TensorFlow, Keras, OpenCV; C#, Java</dd>
+  <dt>Frontend and mobile</dt><dd>TypeScript, React, Next.js, Tailwind CSS, CSS, React Native (Expo), Playwright, Vitest</dd>
+  <dt>Cloud and delivery</dt><dd>AWS (ECS Fargate, RDS, ALB, CloudFront, EventBridge, Secrets Manager, SES), Terraform, AWS CDK, Docker, CI/CD with GitHub Actions, Git, Railway, Vercel</dd>
+  <dt>Messaging and integrations</dt><dd>Twilio, Telnyx, Gmail API (push notifications, sending), Google Calendar API, hotel PMS and POS integrations (Maestro, Oracle OHIP, Silverware), Facebook Marketplace</dd>
+</dl>
+</body>
+</html>
