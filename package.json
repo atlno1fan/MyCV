@@ -5,7 +5,7 @@
   "description": "Yomna Salem's CV and portfolio site: React, TypeScript, Vite and Tailwind, deployed to GitHub Pages.",
   "type": "module",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "scripts": {
     "dev": "vite",

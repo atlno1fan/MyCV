@@ -23,7 +23,7 @@ npm run check     # lint, typecheck, test and build, the same gate CI runs
 npm run cv:pdf    # rebuild the two CV PDFs in public/ from cv/*.html
 ```
 
-Node 20 or newer (see `.nvmrc`).
+Node 22 or newer (see `.nvmrc`).
 
 ## Editing the content
 
