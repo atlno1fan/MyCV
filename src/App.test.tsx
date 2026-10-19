@@ -17,6 +17,21 @@ describe('App', () => {
     }
   });
 
+  it('opens a menu of the sections on narrow screens and closes it on choice', async () => {
+    render(<App />);
+    expect(screen.queryByRole('navigation', { name: 'Menu' })).not.toBeInTheDocument();
+    const button = screen.getByRole('button', { name: 'Menu' });
+    expect(button).toHaveAttribute('aria-expanded', 'false');
+    await userEvent.click(button);
+    const menu = screen.getByRole('navigation', { name: 'Menu' });
+    for (const label of ['About', 'Experience', 'Projects', 'Education', 'Skills']) {
+      expect(within(menu).getByRole('link', { name: label })).toBeInTheDocument();
+    }
+    await userEvent.click(within(menu).getByRole('link', { name: 'Skills' }));
+    expect(screen.queryByRole('navigation', { name: 'Menu' })).not.toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Menu' })).toHaveAttribute('aria-expanded', 'false');
+  });
+
   it('points the contact buttons at the email address', () => {
     render(<App />);
     for (const link of screen.getAllByRole('link', { name: /get in touch/i })) {

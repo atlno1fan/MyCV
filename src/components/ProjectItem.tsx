@@ -9,7 +9,7 @@ interface ProjectItemProps {
 
 export function ProjectItem({ project }: ProjectItemProps) {
   return (
-    <article className="py-12 first:pt-0 last:pb-0">
+    <article>
       <h3 className="text-xl font-semibold text-ink">{project.title}</h3>
       <ul className="mt-4 flex flex-wrap gap-2.5" aria-label="Technologies">
         {project.technologies.map((technology) => (

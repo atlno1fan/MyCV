@@ -67,7 +67,10 @@ export function App() {
           <Section id="experience" title="Experience" icon={Briefcase}>
             <div className="divide-y divide-line">
               {experiences.map((experience) => (
-                <Reveal key={`${experience.company}-${experience.title}`}>
+                <Reveal
+                  key={`${experience.company}-${experience.title}`}
+                  className="py-12 first:pt-0 last:pb-0"
+                >
                   <ExperienceItem experience={experience} />
                 </Reveal>
               ))}
@@ -79,7 +82,7 @@ export function App() {
           <Section id="projects" title="Projects" icon={FolderGit2} tone="band">
             <div className="divide-y divide-line">
               {projects.map((project) => (
-                <Reveal key={project.title}>
+                <Reveal key={project.title} className="py-12 first:pt-0 last:pb-0">
                   <ProjectItem project={project} />
                 </Reveal>
               ))}

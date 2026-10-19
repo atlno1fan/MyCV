@@ -84,7 +84,7 @@ export function Hero({ intro, socialLinks }: HeroProps) {
           alt={`Portrait of ${intro.name}`}
           width={224}
           height={224}
-          className="h-40 w-40 rounded-full border-2 border-accent/30 object-cover md:h-56 md:w-56"
+          className="order-first h-44 w-44 justify-self-center rounded-full border-2 border-accent/30 object-cover md:order-none md:h-56 md:w-56 md:justify-self-end"
         />
       </div>
     </section>
