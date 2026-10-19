@@ -9,7 +9,7 @@ interface SkillGroupsProps {
 export function SkillGroups({ groups }: SkillGroupsProps) {
   return (
     <div>
-      <p className="mb-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted">
+      <p className="mb-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted">
         <span className="inline-flex items-center gap-2">
           <span
             className="inline-block h-3 w-3 rounded-sm border border-accent/40 bg-accent/10"
@@ -26,14 +26,14 @@ export function SkillGroups({ groups }: SkillGroupsProps) {
         {groups.map((group) => (
           <div
             key={group.name}
-            className="grid items-start gap-3 py-6 md:grid-cols-[14rem_minmax(0,1fr)] md:gap-8"
+            className="grid items-start gap-4 py-8 md:grid-cols-[14rem_minmax(0,1fr)] md:gap-10"
           >
             <h3 className="flex items-center gap-2 text-lg font-semibold text-ink">
               <group.icon className="h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
               {group.name}
             </h3>
             {/* items-start and content-start keep every chip at its natural height, whatever the label's height. */}
-            <ul className="flex flex-wrap content-start items-start gap-2" aria-label={group.name}>
+            <ul className="flex flex-wrap content-start items-start gap-2.5" aria-label={group.name}>
               {group.core.map((skill) => (
                 <Chip key={skill} label={skill} tone="core" />
               ))}

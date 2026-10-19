@@ -10,7 +10,7 @@ interface SiteFooterProps {
 export function SiteFooter({ name, contactEmail, socialLinks }: SiteFooterProps) {
   return (
     <footer className="border-t border-line">
-      <div className="mx-auto flex max-w-content flex-col gap-4 px-5 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between md:px-8">
+      <div className="mx-auto flex max-w-content flex-col gap-4 px-6 py-10 text-sm text-muted sm:flex-row sm:items-center sm:justify-between md:px-10">
         <p>
           {name} · <span className="select-all">{contactEmail}</span>
         </p>

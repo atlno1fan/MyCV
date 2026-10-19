@@ -18,13 +18,13 @@ export function Section({ id, title, icon: Icon, tone = 'plain', children }: Sec
       aria-labelledby={headingId}
       className={`scroll-mt-16 ${tone === 'band' ? 'bg-surface-2' : ''}`}
     >
-      <div className="mx-auto max-w-content px-5 py-20 md:px-8 md:py-24">
+      <div className="mx-auto max-w-content px-6 py-24 md:px-10 md:py-32">
         <h2 id={headingId} className="flex items-center gap-3 font-serif text-3xl text-ink md:text-4xl">
           {Icon && <Icon className="h-7 w-7 text-accent" aria-hidden="true" />}
           {title}
         </h2>
         <div className="mt-4 h-0.5 w-12 bg-accent" aria-hidden="true" />
-        <div className="mt-10">{children}</div>
+        <div className="mt-12">{children}</div>
       </div>
     </section>
   );

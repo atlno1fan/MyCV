@@ -11,7 +11,7 @@ const tones = {
 
 export function Chip({ label, tone = 'default' }: ChipProps) {
   return (
-    <li className={`inline-block rounded-md border px-2.5 py-1 text-sm leading-snug ${tones[tone]}`}>
+    <li className={`inline-block rounded-md border px-3 py-1.5 text-sm leading-snug ${tones[tone]}`}>
       {label}
     </li>
   );

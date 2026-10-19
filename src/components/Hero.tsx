@@ -12,7 +12,7 @@ export function Hero({ intro, socialLinks }: HeroProps) {
     <section
       id="top"
       aria-label="Introduction"
-      className="mx-auto max-w-content px-5 pb-16 pt-14 md:px-8 md:pb-24 md:pt-24"
+      className="mx-auto max-w-content px-6 pb-20 pt-16 md:px-10 md:pb-28 md:pt-28"
     >
       <div className="grid gap-10 md:grid-cols-[minmax(0,1fr)_auto] md:items-start">
         <div>
@@ -27,9 +27,9 @@ export function Hero({ intro, socialLinks }: HeroProps) {
               {intro.highlights.map((item, index) => (
                 <div
                   key={item.label}
-                  className={`flex flex-col py-5 pr-3 ${index > 0 ? 'border-l border-line pl-4' : ''}`}
+                  className={`flex flex-col py-6 pr-5 ${index > 0 ? 'border-l border-line pl-6' : ''}`}
                 >
-                  <dt className="order-2 mt-1 text-sm leading-snug text-muted">{item.label}</dt>
+                  <dt className="order-2 mt-2 text-sm leading-snug text-muted">{item.label}</dt>
                   <dd className="order-1 font-serif text-3xl text-ink tabular-nums md:text-4xl">
                     {item.value}
                   </dd>
@@ -38,7 +38,7 @@ export function Hero({ intro, socialLinks }: HeroProps) {
             </dl>
           )}
 
-          <div className="mt-10 flex flex-wrap items-center gap-3">
+          <div className="mt-12 flex flex-wrap items-center gap-4">
             <a href={`mailto:${intro.contactEmail}`} className="btn btn-primary">
               <Mail className="h-4 w-4" aria-hidden="true" />
               Get in touch
@@ -61,7 +61,7 @@ export function Hero({ intro, socialLinks }: HeroProps) {
             )}
           </div>
 
-          <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm" aria-label="Profiles">
+          <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm" aria-label="Profiles">
             {socialLinks.map((link) => (
               <li key={link.platform}>
                 <a
@@ -76,7 +76,7 @@ export function Hero({ intro, socialLinks }: HeroProps) {
             ))}
           </ul>
 
-          {intro.availability && <p className="mt-8 max-w-2xl text-sm text-muted">{intro.availability}</p>}
+          {intro.availability && <p className="mt-10 max-w-2xl text-sm text-muted">{intro.availability}</p>}
         </div>
 
         <img

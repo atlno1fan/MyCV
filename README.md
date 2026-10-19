@@ -13,6 +13,9 @@ two-page and a one-page PDF. The content lives in one typed file; the rest is th
 - Vitest and Testing Library for tests, ESLint (TypeScript, React, hooks, accessibility) and Prettier
 - GitHub Actions: every pull request is linted, type-checked, tested and built; every push to `main` is
   verified the same way and then published to GitHub Pages
+- Prerendered at build time: the published page carries the full HTML, so search engines, AI crawlers and
+  screening tools read the CV without running JavaScript; the build also writes `cv.md` (the CV as
+  Markdown) and `llms.txt` from the same content file
 
 ## Working on it
 

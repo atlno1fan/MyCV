@@ -10,7 +10,7 @@ export function EducationList({ education, certifications }: EducationListProps)
   return (
     <div className="divide-y divide-line">
       {education.map((entry) => (
-        <article key={entry.institution} className="py-8 first:pt-0">
+        <article key={entry.institution} className="py-10 first:pt-0">
           <div className="grid gap-1 md:grid-cols-[minmax(0,1fr)_auto] md:gap-x-8">
             <div>
               <h3 className="text-xl font-semibold text-ink">{entry.degree}</h3>
@@ -32,12 +32,12 @@ export function EducationList({ education, certifications }: EducationListProps)
         </article>
       ))}
       {certifications.length > 0 && (
-        <div className="py-8 last:pb-0">
+        <div className="py-10 last:pb-0">
           <h3 className="flex items-center gap-2 text-xl font-semibold text-ink">
             <Award className="h-5 w-5 text-accent" aria-hidden="true" />
             Certifications
           </h3>
-          <ul className="mt-4 list-disc space-y-2 pl-5 text-[17px] leading-[1.6] text-ink-2">
+          <ul className="mt-5 list-disc space-y-2.5 pl-6 text-[17px] leading-[1.65] text-ink-2">
             {certifications.map((certification) => (
               <li key={certification.name}>
                 {certification.name}
