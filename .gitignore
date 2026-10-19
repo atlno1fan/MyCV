@@ -3,6 +3,7 @@ node_modules
 
 # build output and caches
 dist
+dist-ssr
 coverage
 .vite
 

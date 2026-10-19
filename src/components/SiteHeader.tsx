@@ -10,8 +10,8 @@ interface SiteHeaderProps {
 
 export function SiteHeader({ name, sections, activeId, contactEmail }: SiteHeaderProps) {
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-surface/90 backdrop-blur">
-      <div className="mx-auto flex h-14 max-w-content items-center gap-6 px-5 md:h-16 md:px-8">
+    <header className="sticky top-0 z-40 border-b border-line bg-surface">
+      <div className="mx-auto flex h-14 max-w-content items-center gap-6 px-6 md:h-16 md:px-10">
         <a
           href="#top"
           className="whitespace-nowrap font-serif text-lg text-ink hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
