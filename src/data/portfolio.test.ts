@@ -20,10 +20,16 @@ describe('portfolio content', () => {
       intro.title,
       intro.summary,
       intro.about.lead,
-      ...intro.about.paragraphs,
+      ...intro.about.points,
       ...intro.highlights.flatMap((item) => [item.value, item.label]),
       ...experiences.flatMap((role) => [role.title, role.company, ...role.periods, ...role.responsibilities]),
-      ...projects.flatMap((project) => [project.title, project.description, ...project.technologies]),
+      ...projects.flatMap((project) => [
+        project.title,
+        project.summary,
+        ...project.points,
+        ...(project.results ?? []),
+        ...project.technologies,
+      ]),
       ...education.flatMap((entry) => [
         entry.institution,
         entry.degree,
@@ -35,6 +41,12 @@ describe('portfolio content', () => {
       ...skillGroups.flatMap((group) => [group.name, ...group.core, ...group.more]),
     ];
     expect(strings.filter(isBlank)).toEqual([]);
+  });
+
+  it('gives every project at least one point', () => {
+    for (const project of projects) {
+      expect(project.points.length, project.title).toBeGreaterThan(0);
+    }
   });
 
   it('keeps every skill group non-empty and free of duplicate chips', () => {

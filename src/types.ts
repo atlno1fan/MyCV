@@ -18,7 +18,7 @@ export interface Intro {
   profileImage: string;
   about: {
     lead: string;
-    paragraphs: string[];
+    points: string[];
   };
 }
 
@@ -34,8 +34,12 @@ export interface Experience {
 export interface Project {
   title: string;
   technologies: string[];
-  description: string;
-  results?: string;
+  /** One sentence on what it is. */
+  summary: string;
+  /** What was built, one point per line. */
+  points: string[];
+  /** Measured outcomes, one per line. */
+  results?: string[];
   /** Only projects that can be shown publicly carry a link. */
   link?: string;
 }
