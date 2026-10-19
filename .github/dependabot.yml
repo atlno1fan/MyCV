@@ -1,11 +1,13 @@
 version: 2
 updates:
+  # One pull request a month with every minor and patch update in it. CI checks it; merge it or leave it.
   - package-ecosystem: npm
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
     groups:
-      minor-and-patch:
+      monthly-updates:
+        patterns: ['*']
         update-types: [minor, patch]
     # Major versions of these change how the site is built or rendered (Tailwind 4 replaces the
     # config and PostCSS setup; React 19 changes the types and the test tooling). They are
@@ -24,4 +26,7 @@ updates:
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
+    groups:
+      monthly-actions:
+        patterns: ['*']
