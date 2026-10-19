@@ -1,0 +1,16 @@
+# Yomna Salem
+
+> Lead AI and Machine Learning Software Engineer. I build AI agents and the platforms behind them: voice and messaging agents, backends, consoles and AWS infrastructure.
+
+## CV
+
+- [CV as Markdown](https://atlno1fan.github.io/MyCV/cv.md): the complete CV, the best format for tools
+- [CV as PDF](https://atlno1fan.github.io/MyCV/Yomna-Salem-CV.pdf): two pages
+- [One-page CV as PDF](https://atlno1fan.github.io/MyCV/Yomna-Salem-CV-1page.pdf)
+- [Web page](https://atlno1fan.github.io/MyCV/): the same content, prerendered HTML
+
+## Contact
+
+- Email: yomnasalem01@gmail.com
+- GitHub: https://github.com/atlno1fan
+- LinkedIn: https://linkedin.com/in/yomna-salem-8a0305141
