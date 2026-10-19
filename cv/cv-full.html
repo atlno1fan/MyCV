@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Yomna Salem CV</title>
+<style>
+  @page { size: A4; margin: 10mm 13mm 10mm 13mm; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif; color: #18181b; font-size: 9.0pt; line-height: 1.3; }
+  a { color: inherit; text-decoration: none; }
+  header { border-bottom: 2px solid #6d28d9; padding-bottom: 6pt; margin-bottom: 8pt; }
+  h1 { font-size: 22pt; margin: 0; letter-spacing: -0.01em; color: #4c1d95; }
+  .role { font-size: 12pt; font-weight: 600; margin: 2pt 0 4pt; }
+  .contact { display: flex; flex-wrap: wrap; gap: 4pt 14pt; font-size: 9pt; color: #3f3f46; }
+  h2 { font-size: 10.5pt; text-transform: uppercase; letter-spacing: 0.08em; color: #6d28d9; margin: 9pt 0 3pt; padding-bottom: 2pt; border-bottom: 1px solid #e4e4e7; break-after: avoid; }
+  p { margin: 0 0 4pt; }
+  .job { margin-bottom: 5pt; break-inside: avoid; }
+  .job-head { display: flex; justify-content: space-between; gap: 12pt; align-items: baseline; }
+  .job-head b { font-size: 10.2pt; }
+  .job-head span { color: #52525b; font-size: 9pt; white-space: nowrap; }
+  .org { color: #52525b; margin-bottom: 2pt; }
+  ul { margin: 0; padding-left: 12pt; }
+  li { margin: 0 0 2pt; }
+  .proj { margin-bottom: 5pt; break-inside: avoid; }
+  .proj b { display: block; }
+  .proj .res { color: #3f3f46; }
+  .skills { display: grid; grid-template-columns: 140pt 1fr; gap: 1.5pt 8pt; }
+  .skills dt { font-weight: 600; }
+  .skills dd { margin: 0; color: #27272a; }
+  .skills .more { color: #71717a; }
+  .edu { display: flex; justify-content: space-between; gap: 12pt; margin-bottom: 4pt; break-inside: avoid; }
+  .edu span { color: #52525b; font-size: 9pt; white-space: nowrap; }
+  .edu small { display: block; color: #52525b; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Yomna Salem</h1>
+  <div class="role">Lead AI and Machine Learning Software Engineer</div>
+  <div class="contact">
+    <a href="mailto:yomnasalem01@gmail.com">yomnasalem01@gmail.com</a>
+    <a href="https://github.com/atlno1fan">github.com/atlno1fan</a>
+    <a href="https://linkedin.com/in/yomna-salem-8a0305141">linkedin.com/in/yomna-salem-8a0305141</a>
+    <a href="https://atlno1fan.github.io/MyCV/">atlno1fan.github.io/MyCV</a>
+  </div>
+</header>
+
+<h2>Profile</h2>
+<p>I build AI agents and the platforms behind them: voice and messaging agents, backends, consoles and AWS infrastructure. I like owning a problem end to end, from the first commit of a backend to the AWS account it runs in, and from an agent's prompt to the number that proves it worked. Over the past year I built two AI products from scratch, one for car dealerships and one for hotels, led their move onto one production platform, and built the system my team plans and reviews its work in. 4,000+ commits across 29 repositories in the past year; 38 sales traced back to an AI agent I built; 3 production platforms designed and run on AWS. Open to lead and senior roles in AI engineering, full-stack engineering and technical project management, on site or remote.</p>
+
+<h2>Experience</h2>
+<div class="job">
+  <div class="job-head"><b>Lead AI and Machine Learning Software Engineer</b><span>Jul 2025 to present</span></div>
+  <div class="org">Revamply</div>
+  <ul>
+    <li>Built an AI sales-agent backend for car dealerships from the first commit and grew it into a production platform: voice, SMS, email, web chat and Facebook Marketplace agents, 485 API routes and 49 agent tools. Wrote 87% of the codebase across about 960 merged pull requests.</li>
+    <li>Delivered verified results for a franchise dealership in seven weeks: 1,962 leads handled, 464 real conversations, 65 appointments booked by the AI and 38 resulting sales confirmed against the dealer's records, with a 2-second median reply against the dealer's 93-hour first contact.</li>
+    <li>Led the merge of two dealership products into one platform on AWS: ported 119 of 119 modules and 269 endpoints in about five days, moved 156 database tables and cut the previous database provider's costs to zero.</li>
+    <li>Built a voice agent for hotel guests (OpenAI Realtime, Anthropic Claude, ElevenLabs, Twilio, Pinecone) and evolved it into a hotel operations platform now in production ahead of its first hotel pilot, integrating with the Maestro PMS (certified), Oracle OHIP and the Silverware POS. Wrote 57 of 65 production database migrations.</li>
+    <li>Raised automated test coverage from 0 to 1,687 tests in eight weeks and added a migrate-first deploy gate that stopped broken database migrations before they reached production.</li>
+    <li>Designed, built and ran production AWS for three products (ECS Fargate, RDS PostgreSQL, ALB, CloudFront, EventBridge, Secrets Manager), all in Terraform, with CI/CD pipelines on GitHub Actions using OIDC deploys. Moved the agent backend from Railway and SQL Server to AWS and PostgreSQL, and decommissioned a legacy stack.</li>
+    <li>Shipped a live housekeeping system with a phone app for staff, real-time PMS data ingestion (about 0.8 s to screen), automated advance-deposit enforcement and a read-only safety gate on every PMS write.</li>
+    <li>Built truthfulness guards that stop the AI from offering sold cars, inventing vehicle history or claiming actions it did not take, validated against 13,765 real replies without touching a correct one.</li>
+    <li>Strengthened security and compliance: closed a cross-tenant data access hole, made identity fail closed, added row-level security, enforced TCPA and A2P consent, and switched on AWS account controls toward SOC 2 readiness.</li>
+    <li>Built the team's work-management system (164 API routes, an MCP server with 100 tools, a Claude Code plugin) and used it to plan, queue and review the engineering team's work.</li>
+    <li>Ran releases and set engineering standards for a team of four engineers: 237 production promotions, test plans across 67 modules, onboarding and UI standards, and more than 4,300 lines of team documentation.</li>
+    <li>Owned the vendor certification and the client requirements on both products, wrote the audit that traced every lead to a sale and the monthly cost model behind pricing decisions, and briefed leadership with a 32-page system overview.</li>
+  </ul>
+</div>
+<div class="job">
+  <div class="job-head"><b>Software Engineer</b><span>Aug 2024 to present, project-based</span></div>
+  <div class="org">Outlier</div>
+  <ul>
+    <li>Offered detailed human feedback to train advanced generative AI models; assessed and revised AI-generated code across Python, JavaScript and TypeScript.</li>
+  </ul>
+</div>
+<div class="job">
+  <div class="job-head"><b>Software Engineer</b><span>Jan 2020 to Jun 2022</span></div>
+  <div class="org">Institute of Tourism Research and Innovation, UNIMAS (internship Jan to Aug 2020, part-time Sep 2020 to Aug 2021, full-time remote Sep 2021 to Jun 2022)</div>
+  <ul>
+    <li>For a state tourism board's Android app: built the AR treasure-hunt game in Unity, guiding visitors by location to puzzle pieces at five tourist spots, and several screens in Java and Adobe XD. Agile with user acceptance testing every sprint; on Google Play with 1,000+ downloads.</li>
+    <li>Led a team of three to deliver an Android campus tour-guide app in two weeks of three-day sprints: Google Maps geolocation triggers a video pop-up at each of 46 buildings. Java with Microsoft SQL Server.</li>
+    <li>Built 15+ pages of a fulfilment-style stock platform (sellers store stock in managed lots; the platform sells and ships it) in React.js and Node.js on REST APIs and SQL Server, in two-week sprints with monthly stakeholder meetings. Also AR and VR apps in Unity, interface design and testing.</li>
+  </ul>
+</div>
+
+<h2>Selected projects</h2>
+<div class="proj">
+  <b>AI sales agents for car dealerships</b>
+  An agent platform that answers and follows up with car buyers by phone, SMS, email, web chat and Facebook Marketplace, searches live inventory, books test drives and appraisals, sends credit applications and hands off to staff, with a dealer console and CRM around it.
+  <div class="res">Results: 1,962 leads, 464 real conversations, 65 appointments and 38 confirmed sales in seven weeks; hand-offs to staff fell from 55 to 15 per 100 conversations as the agent learned to answer price, finance and trade-in questions itself.</div>
+</div>
+<div class="proj">
+  <b>Hotel operations platform</b>
+  A platform connected to the hotel's property management and point-of-sale systems (Maestro, Oracle OHIP, Silverware): a certified PMS integration, real-time reservation and guest data, automated advance-deposit enforcement, a housekeeping board with a phone app for staff, and a concierge agent runtime for guests. Began as a voice agent for hotel guests on OpenAI Realtime, built as the sole engineer.
+  <div class="res">Results: Maestro PMS certification; a PMS push loop of 313,152 messages a day resolved with the vendor; live updates on screen in about 0.8 s; every PMS write behind a read-only safety gate by default.</div>
+</div>
+<div class="proj">
+  <b>Team work-management system</b>
+  Projects, tasks with several assignees, work queues with dependency locks, daily updates, reviews and completion checks, plus an MCP server with OAuth sign-in and a Claude Code plugin so the team's AI assistants work inside the same system.
+  <div class="res">Results: 164 API routes, 210 tests, 100 MCP tools; load times cut from 27 s to 0.5 s; used daily by the team.</div>
+</div>
+
+<div class="proj">
+  <b>Word-Digest: a long-text summariser for ChatGPT prompts (MSc graduation project, <a href="https://github.com/atlno1fan/Word-Digest">github.com/atlno1fan/Word-Digest</a>)</b>
+  Led a team of four with five supervisors from Queen's, Cairo University and Microsoft's Cairo office. A retrieval-augmented pipeline (PDF to HTML, FAISS, transformer models, GPT-3.5) in Python and Flask that condenses documents beyond ChatGPT's context window into prompts it can answer from; I built the core mechanics and the evaluation.
+  <div class="res">Results: context passed to ChatGPT cut by 97.93% while keeping 79.27% answer accuracy against manually supplied text; prompt generation down from 50 s to 10 s on a 24,425-word PDF.</div>
+</div>
+
+<h2>Education</h2>
+<div class="edu"><div><b>MSc in Data Science and Artificial Intelligence</b>, Queen's University<small>GPA 4.02/4.5. Thesis: Words-Digest, a long-text summariser for ChatGPT prompts (team lead). Scholarship-funded, project-based degree over three semesters, preceded by three months of Azure and AWS cloud courses (Nov 2022 to Jan 2023).</small></div><span>Jan 2023 to Mar 2024</span></div>
+<div class="edu"><div><b>BSc (Hons) Computer Science, Software Engineering</b>, University Malaysia Sarawak<small>GPA 3.45/4.0. Thesis: improving 2D facial detection and recognition of masked faces.</small></div><span>2017 to 2021</span></div>
+<p><b>Certifications:</b> AWS Certified Cloud Practitioner, Amazon Web Services (Jan 2023 to Jan 2029); Microsoft Certified: Azure Data Scientist Associate, Microsoft (Dec 2022 to Jan 2027); HCIA-AI, Huawei (Nov 2022, expired Nov 2025); Professional Certifications in Machine Learning, Data Engineering, and Applications and Use Cases, Altair RapidMiner (Nov 2020).</p>
+
+<h2>Technical skills</h2>
+<dl class="skills">
+  <dt>AI and agents</dt><dd>OpenAI (Realtime voice, GPT), Anthropic Claude, real-time voice agents (telephony), RAG and vector search (Pinecone), agent tools and guardrails, agent evaluation on real conversations, Model Context Protocol (MCP), ElevenLabs, Deepgram <span class="more">· LangChain</span></dd>
+  <dt>Backend</dt><dd>Python, FastAPI, SQLAlchemy, Alembic, PostgreSQL, pytest, .NET <span class="more">· C#, Java, PHP, Microsoft SQL Server, MySQL</span></dd>
+  <dt>Frontend and mobile</dt><dd>TypeScript, React, Next.js, Tailwind CSS, CSS, React Native (Expo), Playwright, Vitest <span class="more">· JavaScript, HTML5, Framer Motion</span></dd>
+  <dt>Cloud and delivery</dt><dd>AWS ECS Fargate, RDS, ALB and CloudFront, EventBridge, Secrets Manager, SES, Terraform, AWS CDK, Docker, CI/CD with GitHub Actions, Git, Railway, Vercel <span class="more">· Microsoft Azure</span></dd>
+  <dt>Messaging and integrations</dt><dd>Twilio (voice, SMS), Telnyx, Gmail API (push notifications, sending), Google Calendar API, hotel PMS and POS integrations (Maestro, Oracle OHIP, Silverware) <span class="more">· Facebook Marketplace</span></dd>
+  <dt>Data and machine learning</dt><dd>SQL, PyTorch, TensorFlow, Keras, OpenCV <span class="more">· Hadoop, Spark, Hive, Pig, Tableau, RapidMiner, MATLAB</span></dd>
+  <dt>Spoken languages</dt><dd>English (near-native, TOEFL iBT 110, 2022), Arabic (native)</dd>
+  <dt>Also worked with</dt><dd class="more">C, C++, Prolog, Unity3D, Android Studio, Adobe Photoshop, Adobe XD</dd>
+</dl>
+</body>
+</html>
