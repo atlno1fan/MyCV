@@ -14,7 +14,7 @@ export function ExperienceItem({ experience }: ExperienceItemProps) {
   const hidden = all.length - shown;
 
   return (
-    <article className="py-12 first:pt-0 last:pb-0">
+    <article>
       <div className="grid gap-1 md:grid-cols-[minmax(0,1fr)_auto] md:gap-x-8">
         <div>
           <h3 className="text-xl font-semibold text-ink">{experience.title}</h3>
