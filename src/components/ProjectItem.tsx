@@ -9,24 +9,33 @@ interface ProjectItemProps {
 
 export function ProjectItem({ project }: ProjectItemProps) {
   return (
-    <article className="py-8 first:pt-0 last:pb-0">
+    <article className="py-10 first:pt-0 last:pb-0">
       <h3 className="text-xl font-semibold text-ink">{project.title}</h3>
-      <ul className="mt-3 flex flex-wrap gap-1.5" aria-label="Technologies">
+      <ul className="mt-3 flex flex-wrap gap-2" aria-label="Technologies">
         {project.technologies.map((technology) => (
           <Chip key={technology} label={technology} />
         ))}
       </ul>
-      <p className="mt-4 max-w-3xl leading-relaxed text-ink-2">{project.description}</p>
-      {project.results && (
-        <div className="mt-4 max-w-3xl border-l-2 border-accent pl-4">
+      <p className="mt-5 max-w-3xl text-[17px] leading-[1.7] text-ink-2">{project.summary}</p>
+      <ul className="mt-4 max-w-3xl list-disc space-y-2 pl-5 text-[17px] leading-[1.7] text-ink-2">
+        {project.points.map((point) => (
+          <li key={point}>{point}</li>
+        ))}
+      </ul>
+      {project.results && project.results.length > 0 && (
+        <div className="mt-5 max-w-3xl border-l-2 border-accent pl-4">
           <h4 className="text-sm font-semibold uppercase tracking-wide text-accent">Results</h4>
-          <p className="mt-1 leading-relaxed text-ink-2">{project.results}</p>
+          <ul className="mt-2 list-disc space-y-1.5 pl-5 text-[17px] leading-[1.6] text-ink-2">
+            {project.results.map((result) => (
+              <li key={result}>{result}</li>
+            ))}
+          </ul>
         </div>
       )}
       {project.link && (
         <a
           href={project.link}
-          className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:text-accent-strong focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:text-accent-strong focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           {...externalLinkProps(project.link)}
         >
           View project

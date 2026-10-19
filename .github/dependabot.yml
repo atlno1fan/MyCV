@@ -1,13 +1,29 @@
 version: 2
 updates:
+  # One pull request a month with every minor and patch update in it. CI checks it; merge it or leave it.
   - package-ecosystem: npm
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
     groups:
-      minor-and-patch:
+      monthly-updates:
+        patterns: ['*']
         update-types: [minor, patch]
+    # A React major changes the types and the test tooling, so it is a deliberate migration,
+    # not a routine bump; Dependabot leaves it alone.
+    ignore:
+      - dependency-name: react
+        update-types: ['version-update:semver-major']
+      - dependency-name: react-dom
+        update-types: ['version-update:semver-major']
+      - dependency-name: '@types/react'
+        update-types: ['version-update:semver-major']
+      - dependency-name: '@types/react-dom'
+        update-types: ['version-update:semver-major']
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
+    groups:
+      monthly-actions:
+        patterns: ['*']

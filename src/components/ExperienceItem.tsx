@@ -14,11 +14,11 @@ export function ExperienceItem({ experience }: ExperienceItemProps) {
   const hidden = all.length - shown;
 
   return (
-    <article className="py-8 first:pt-0 last:pb-0">
+    <article className="py-10 first:pt-0 last:pb-0">
       <div className="grid gap-1 md:grid-cols-[minmax(0,1fr)_auto] md:gap-x-8">
         <div>
           <h3 className="text-xl font-semibold text-ink">{experience.title}</h3>
-          <p className="text-ink-2">{experience.company}</p>
+          <p className="mt-1 text-ink-2">{experience.company}</p>
         </div>
         <ul className="text-sm text-muted md:text-right">
           {experience.periods.map((period) => (
@@ -26,7 +26,7 @@ export function ExperienceItem({ experience }: ExperienceItemProps) {
           ))}
         </ul>
       </div>
-      <ul className="mt-4 list-disc space-y-2 pl-5 leading-relaxed text-ink-2">
+      <ul className="mt-5 max-w-3xl list-disc space-y-3 pl-5 text-[17px] leading-[1.7] text-ink-2">
         {items.map((item) => (
           <li key={item}>{item}</li>
         ))}
@@ -36,7 +36,7 @@ export function ExperienceItem({ experience }: ExperienceItemProps) {
           type="button"
           onClick={() => setExpanded((value) => !value)}
           aria-expanded={expanded}
-          className="mt-4 rounded text-sm font-medium text-accent hover:text-accent-strong focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          className="mt-5 rounded text-sm font-medium text-accent hover:text-accent-strong focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
         >
           {expanded ? 'Show less' : `Show ${hidden} more`}
         </button>
