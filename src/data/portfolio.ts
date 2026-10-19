@@ -34,11 +34,13 @@ export const intro: Intro = {
   cvShortFile: 'Yomna-Salem-CV-1page.pdf',
   profileImage,
   about: {
-    lead: "I like owning a problem end to end: from the first commit of a backend to the AWS account it runs in, and from an agent's prompt to the number that proves it worked. Over the past year I built two AI products from scratch, one for car dealerships and one for hotels, led their move onto one production platform, and built the system my team plans and reviews its work in.",
-    paragraphs: [
-      "I studied software engineering in Malaysia and then data science and AI at Queen's University, where my thesis built a long-text summariser for ChatGPT prompts. Before that I spent two years building web, mobile, AR and VR applications for a tourism research institute.",
-      "In late 2025 I started an AI sales-agent backend for car dealerships from an empty repository. It grew into a production platform with voice, SMS, email, web chat and marketplace agents. In its first seven weeks at a dealership it handled 1,962 leads and booked 65 appointments, and 38 of those customers went on to buy a car, confirmed against the dealer's own records.",
-      "In 2026 I built a voice agent for hotel guests and evolved it into a hotel operations platform, certified with the hotel's property management system vendor, and led the merge of two dealership products onto one AWS platform. Along the way I built the team's work-management system, with an MCP server so our AI assistants work inside it, and took on the releases, reviews and engineering standards for a team of four.",
+    lead: "I own problems end to end: from the first commit of a backend to the AWS account it runs in, and from an agent's prompt to the number that proves it worked.",
+    points: [
+      'Two AI products built from scratch in the past year, one for car dealerships and one for hotels, then merged onto one production platform on AWS.',
+      'Lead for a team of four engineers: releases, reviews, engineering standards and the work-management system the team runs on.',
+      "MSc in Data Science and AI at Queen's University; BSc in Software Engineering in Malaysia.",
+      "Two years before that building web, mobile, AR and VR apps at my university's tourism research institute.",
+      'Drawn to agent memory and context limits ever since my thesis built a long-text summariser for ChatGPT prompts.',
     ],
   },
 };
@@ -109,7 +111,7 @@ export const skillGroups: SkillGroup[] = [
       'Telnyx',
       'Gmail API (push notifications, sending)',
       'Google Calendar API',
-      'Hotel PMS and POS integrations (Maestro, Oracle OHIP, Silverware)',
+      'Hotel PMS and POS (Maestro, Oracle OHIP, Silverware)',
     ],
     more: ['Facebook Marketplace'],
   },
@@ -140,18 +142,18 @@ export const experiences: Experience[] = [
     periods: ['Jul 2025 - Present'],
     highlightCount: 4,
     responsibilities: [
-      'Built an AI sales-agent backend for car dealerships from the first commit and grew it into a production platform: voice, SMS, email, web chat and Facebook Marketplace agents, 485 API routes and 49 agent tools. Wrote 87% of the codebase across about 960 merged pull requests.',
-      "Delivered verified results for a franchise dealership in seven weeks: 1,962 leads handled, 464 real conversations, 65 appointments booked by the AI and 38 resulting sales confirmed against the dealer's records, with a 2-second median reply against the dealer's 93-hour first contact.",
-      "Led the merge of two dealership products into one platform on AWS: ported 119 of 119 modules and 269 endpoints in about five days, moved 156 database tables and cut the previous database provider's costs to zero.",
-      'Built a voice agent for hotel guests (OpenAI Realtime, Anthropic Claude, ElevenLabs, Twilio, Pinecone) and evolved it into a hotel operations platform now in production ahead of its first hotel pilot, integrating with the Maestro PMS (certified), Oracle OHIP and the Silverware POS. Wrote 57 of 65 production database migrations.',
-      'Raised automated test coverage from 0 to 1,687 tests in eight weeks and added a migrate-first deploy gate that stopped broken database migrations before they reached production.',
-      'Designed, built and ran production AWS for three products (ECS Fargate, RDS PostgreSQL, ALB, CloudFront, EventBridge, Secrets Manager), all in Terraform, with CI/CD pipelines on GitHub Actions using OIDC deploys. Moved the agent backend from Railway and SQL Server to AWS and PostgreSQL, and decommissioned a legacy stack.',
-      'Shipped a live housekeeping system with a phone app for staff, real-time PMS data ingestion (about 0.8 s to screen), automated advance-deposit enforcement and a read-only safety gate on every PMS write.',
-      'Built truthfulness guards that stop the AI from offering sold cars, inventing vehicle history or claiming actions it did not take, validated against 13,765 real replies without touching a correct one.',
-      'Strengthened security and compliance: closed a cross-tenant data access hole, made identity fail closed, added row-level security, enforced TCPA and A2P consent, and switched on AWS account controls toward SOC 2 readiness.',
-      "Built the team's work-management system (164 API routes, an MCP server with 100 tools, a Claude Code plugin) and used it to plan, queue and review the engineering team's work.",
-      'Ran releases and set engineering standards for a team of four engineers: 237 production promotions, test plans across 67 modules, onboarding and UI standards, and more than 4,300 lines of team documentation.',
-      'Owned the vendor certification and the client requirements on both products, wrote the audit that traced every lead to a sale and the monthly cost model behind pricing decisions, and briefed leadership with a 32-page system overview.',
+      'Built an AI sales-agent backend for car dealerships from the first commit: voice, SMS, email, web chat and Facebook Marketplace agents, 485 API routes, 49 tools, 87% of the codebase across about 960 merged pull requests.',
+      "Verified results at a franchise dealership in seven weeks: 1,962 leads, 464 real conversations, 65 AI-booked appointments and 38 confirmed sales; 2-second median reply against the dealer's 93 hours.",
+      'Led the merge of two dealership products into one AWS platform: 119 of 119 modules and 269 endpoints in about five days, 156 tables moved, the previous database bill cut to zero.',
+      'Built a hotel guest voice agent (OpenAI Realtime, Anthropic Claude, ElevenLabs) and grew it into a hotel operations platform: Maestro PMS certification, Oracle OHIP and Silverware POS integrations, 57 of 65 production migrations.',
+      'Raised test coverage from 0 to 1,687 tests in eight weeks; added a migrate-first deploy gate that stopped broken migrations before production.',
+      'Designed and ran production AWS for three products (ECS Fargate, RDS, ALB, CloudFront, EventBridge, Secrets Manager) in Terraform, with CI/CD on GitHub Actions and OIDC deploys.',
+      'Shipped a live housekeeping system with a staff phone app, real-time PMS ingestion (about 0.8 s to screen), automated deposit enforcement and a read-only gate on every PMS write.',
+      'Built truthfulness guards against sold cars, invented vehicle history and claimed actions, validated on 13,765 real replies with no correct reply touched.',
+      'Closed a cross-tenant data hole, made identity fail closed, added row-level security, enforced TCPA and A2P consent, and switched on AWS account controls toward SOC 2.',
+      "Built the team's work-management system (164 routes, an MCP server with 100 tools, a Claude Code plugin) and run the team's planning, queues and reviews in it.",
+      'Run releases and standards for four engineers: 237 production promotions, test plans across 67 modules, onboarding and UI standards, 4,300+ lines of team documentation.',
+      'Own vendor certification and client requirements; wrote the lead-to-sale audit, the monthly cost model and a 32-page system overview for leadership.',
     ],
   },
   {
@@ -159,23 +161,23 @@ export const experiences: Experience[] = [
     company: 'Outlier',
     periods: ['Aug 2024 - Present (project-based)'],
     responsibilities: [
-      'Offered detailed human feedback to train advanced generative AI models.',
-      'Assessed and revised AI-generated code across Python, JavaScript, and TypeScript.',
+      'Human feedback to train generative AI models on coding.',
+      'Assessed and revised AI-generated code in Python, JavaScript and TypeScript.',
     ],
   },
   {
     title: 'Software Engineer',
-    company: 'Institute of Tourism Research and Innovation, UNIMAS',
+    company: 'Institute of Tourism Research and Innovation, University Malaysia Sarawak (UNIMAS)',
     periods: [
       'Sep 2021 - Jun 2022 (full-time, remote)',
       'Sep 2020 - Aug 2021 (part-time, on site)',
       'Jan 2020 - Aug 2020 (internship, on site)',
     ],
     responsibilities: [
-      "For a state tourism board's Android app: built the AR treasure-hunt game in Unity, which uses the visitor's location to guide them to hidden puzzle pieces at five tourist spots across the city, and designed and built several of the app's screens in Java and Adobe XD. Agile delivery with user acceptance testing every sprint; the app is on Google Play with 1,000+ downloads.",
-      'Led a team of three to deliver an Android campus tour-guide app in two weeks of three-day sprints: Google Maps and geolocation trigger a video pop-up as the bus reaches each of 46 buildings. Java with Microsoft SQL Server.',
-      'Built 15+ functional pages of a fulfilment-style stock platform, where sellers store stock in managed lots and the platform handles selling and shipping: seller and customer interfaces in React.js and Node.js on REST APIs and SQL Server, in two-week sprints with monthly stakeholder meetings, over about a year.',
-      'Also built AR and VR web and mobile applications in Unity, designed interfaces in Adobe XD and Photoshop, and tested applications and websites.',
+      "Built the AR treasure-hunt game (Unity, geolocation, five city sites) and several screens of a state tourism board's Android app; on Google Play with 1,000+ downloads.",
+      'Led a team of three to ship a 46-building campus tour-guide app in two weeks of three-day sprints (Java, Google Maps, SQL Server).',
+      'Built 15+ pages of a stock-fulfilment platform for managed storage lots in React.js and Node.js on REST APIs and SQL Server.',
+      'AR and VR apps in Unity; interface design in Adobe XD and Photoshop; application testing.',
     ],
   },
 ];
@@ -187,7 +189,7 @@ export const education: Education[] = [
     period: 'Jan 2023 - Mar 2024',
     gpa: '4.02/4.5',
     thesis: "Words-Digest: A Long Text Summarizer for ChatGPT's Prompts (team lead)",
-    note: 'Scholarship-funded, project-based degree over three semesters, preceded by three months of Azure and AWS cloud courses (Nov 2022 to Jan 2023).',
+    note: 'Scholarship-funded, project-based, three semesters; preceded by Azure and AWS cloud courses (Nov 2022 to Jan 2023).',
   },
   {
     institution: 'University Malaysia Sarawak',
@@ -235,10 +237,19 @@ export const projects: Project[] = [
       'AWS',
       'Terraform',
     ],
-    description:
-      "An agent platform that answers and follows up with car buyers by phone, SMS, email, web chat and Facebook Marketplace, searches live inventory, books test drives and appraisals, sends credit applications and hands off to staff, with a dealer console and CRM around it. I wrote the agent backend from its first commit, led the merge of two products into one platform on AWS, and built the console's CRM command centre, an AI email desk for the dealer principal, dealer roles and the cost dashboards.",
-    results:
-      'In seven weeks at a franchise dealership: 1,962 leads handled, 464 real conversations, 65 appointments booked, 38 confirmed sales and a 2-second median reply. Hand-offs to staff fell from 55 to 15 per 100 conversations as the agent learned to answer price, finance and trade-in questions itself.',
+    summary:
+      "An agent platform that works a dealership's internet leads by phone, SMS, email, web chat and Facebook Marketplace, with the dealer console and CRM around it.",
+    points: [
+      'Wrote the agent backend from its first commit: 485 API routes, 49 agent tools, 87% of the codebase.',
+      'Led the merge of two products into one platform on AWS: 119 of 119 modules ported in about five days.',
+      "Built the console's CRM command centre, an AI email desk for the dealer principal, dealer roles and cost dashboards.",
+      'Truthfulness guards replayed on 13,765 real replies before release.',
+    ],
+    results: [
+      '1,962 leads, 464 real conversations, 65 appointments and 38 confirmed sales in seven weeks at a franchise dealership.',
+      "2-second median reply against the dealer's 93-hour first contact.",
+      'Hand-offs to staff down from 55 to 15 per 100 conversations.',
+    ],
   },
   {
     title: 'Hotel operations platform',
@@ -257,33 +268,57 @@ export const projects: Project[] = [
       'AWS',
       'Terraform',
     ],
-    description:
-      "A platform connected to the hotel's property management and point-of-sale systems (Maestro, Oracle OHIP, Silverware): a certified PMS integration, real-time reservation and guest data, automated advance-deposit enforcement, a housekeeping board with a phone app for staff, and a concierge agent runtime for guests. It began as a voice agent for hotel guests on OpenAI Realtime, which I built as the sole engineer.",
-    results:
-      'Maestro PMS certification; 57 of 65 production database migrations; a PMS push loop of 313,152 messages a day resolved with the vendor; live updates reach the screen in about 0.8 s; every PMS write behind a read-only safety gate by default.',
+    summary:
+      "A platform on the hotel's property management and point-of-sale systems, grown from a guest voice agent I built as the sole engineer.",
+    points: [
+      'Certified Maestro PMS integration with real-time reservation and guest data; Oracle OHIP and Silverware POS integrations.',
+      'Automated advance-deposit enforcement and a read-only safety gate on every PMS write.',
+      'Housekeeping board with a phone app for staff; concierge agent runtime for guests.',
+      'Voice agent on OpenAI Realtime, Anthropic Claude and ElevenLabs.',
+    ],
+    results: [
+      'Maestro PMS certification; 57 of 65 production database migrations.',
+      'A PMS push loop of 313,152 messages a day resolved with the vendor.',
+      'Live updates on screen in about 0.8 s.',
+    ],
   },
   {
     title: 'Team work-management system',
     technologies: ['Python', 'FastAPI', 'PostgreSQL', 'Next.js', 'MCP', 'OAuth 2.1', 'Railway'],
-    description:
-      "Projects, tasks with several assignees, work queues with dependency locks, daily updates, help requests, reviews and completion checks, plus an MCP server with OAuth sign-in, personal tokens and an audit log, and a Claude Code plugin, so the team's AI assistants work inside the same system.",
-    results:
-      "164 API routes, 210 tests, 100 MCP tools and 13 plugin skills; load times cut from 27 s to 0.5 s after a region move; used daily to plan, queue and review the team's work.",
+    summary: 'The system my team plans, queues and reviews its work in, with Claude connected to it.',
+    points: [
+      'Projects, multi-assignee tasks, work queues with dependency locks, daily updates, reviews and completion checks.',
+      'An MCP server with OAuth sign-in, personal tokens and an audit log, plus a Claude Code plugin.',
+    ],
+    results: [
+      '164 API routes, 210 tests, 100 MCP tools and 13 plugin skills.',
+      'Load times cut from 27 s to 0.5 s after a region move.',
+    ],
   },
   {
     title: 'Word-Digest: a long-text summariser for ChatGPT prompts',
     technologies: ['Python', 'Flask', 'PyTorch', 'Transformers', 'FAISS', 'RAG', 'OpenAI GPT-3.5', 'Jupyter'],
-    description:
-      "My MSc graduation project at Queen's University, where I led a team of four working with five supervisors from Queen's, Cairo University and Microsoft's Cairo office. Documents that exceed ChatGPT's context window are fetched as PDFs, converted to HTML and indexed with FAISS; retrieval-augmented generation pulls the passages that answer the user's question and builds the prompt for GPT-3.5, in a Python and Flask app with a chat loop that keeps history. I built the core mechanics and the evaluation, ran the supervisor meetings and compiled the thesis.",
-    results:
-      'Cut the context passed to ChatGPT by 97.93% while keeping 79.27% answer accuracy against manually supplied text, and reduced prompt generation from 50 s to 10 s on a 24,425-word PDF.',
+    summary:
+      "My MSc graduation project at Queen's University: retrieval-augmented prompts that let ChatGPT answer from documents far beyond its context window.",
+    points: [
+      "Led a team of four with five supervisors from Queen's, Cairo University and Microsoft's Cairo office.",
+      'PDF to HTML, FAISS retrieval and transformer models feeding GPT-3.5 in a Python and Flask app.',
+      'Built the core mechanics and the evaluation; compiled the thesis.',
+    ],
+    results: [
+      'Context passed to ChatGPT cut by 97.93% at 79.27% answer accuracy.',
+      'Prompt generation down from 50 s to 10 s on a 24,425-word PDF.',
+    ],
     link: 'https://github.com/atlno1fan/Word-Digest',
   },
   {
     title: 'This site',
     technologies: ['TypeScript', 'React', 'Vite', 'Tailwind CSS', 'Vitest', 'GitHub Actions'],
-    description:
-      'A data-driven CV and portfolio: the content sits in one typed file, sections are deep-linkable, and every push is linted, type-checked, tested and built before GitHub Actions deploys it to GitHub Pages behind a strict Content Security Policy.',
+    summary: 'This CV: TypeScript, React and Vite, with the content in one typed file.',
+    points: [
+      'Linted, type-checked, tested and built on every push, then deployed to GitHub Pages by GitHub Actions.',
+      'Strict Content Security Policy and no third-party requests.',
+    ],
     link: 'https://github.com/atlno1fan/MyCV',
   },
 ];

@@ -38,7 +38,7 @@ export function SiteHeader({ name, sections, activeId, contactEmail }: SiteHeade
             })}
           </ul>
         </nav>
-        <a href={`mailto:${contactEmail}`} className="btn btn-primary hidden md:inline-flex">
+        <a href={`mailto:${contactEmail}`} className="btn btn-primary hidden md:ml-auto md:inline-flex">
           <Mail className="h-4 w-4" aria-hidden="true" />
           Get in touch
         </a>

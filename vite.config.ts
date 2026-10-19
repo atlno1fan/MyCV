@@ -1,3 +1,4 @@
+import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import { defineConfig, type Plugin } from 'vitest/config';
 
@@ -32,7 +33,7 @@ const cspMetaTag = (): Plugin => ({
 
 export default defineConfig({
   base,
-  plugins: [react(), cspMetaTag()],
+  plugins: [react(), tailwindcss(), cspMetaTag()],
   build: {
     target: 'es2020',
     sourcemap: false,

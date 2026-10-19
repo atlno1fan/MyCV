@@ -55,55 +55,53 @@ export function App() {
       <main id="main">
         <Hero intro={intro} socialLinks={socialLinks} />
 
-        <div className="mx-auto max-w-content px-5 md:px-8">
-          {intro.about.lead && (
-            <Section id="about" title="About">
-              <Reveal>
-                <About lead={intro.about.lead} paragraphs={intro.about.paragraphs} />
-              </Reveal>
-            </Section>
-          )}
+        {intro.about.lead && (
+          <Section id="about" title="About" tone="band">
+            <Reveal>
+              <About lead={intro.about.lead} points={intro.about.points} />
+            </Reveal>
+          </Section>
+        )}
 
-          {experiences.length > 0 && (
-            <Section id="experience" title="Experience" icon={Briefcase}>
-              <div className="divide-y divide-line">
-                {experiences.map((experience) => (
-                  <Reveal key={`${experience.company}-${experience.title}`}>
-                    <ExperienceItem experience={experience} />
-                  </Reveal>
-                ))}
-              </div>
-            </Section>
-          )}
+        {experiences.length > 0 && (
+          <Section id="experience" title="Experience" icon={Briefcase}>
+            <div className="divide-y divide-line">
+              {experiences.map((experience) => (
+                <Reveal key={`${experience.company}-${experience.title}`}>
+                  <ExperienceItem experience={experience} />
+                </Reveal>
+              ))}
+            </div>
+          </Section>
+        )}
 
-          {projects.length > 0 && (
-            <Section id="projects" title="Projects" icon={FolderGit2}>
-              <div className="divide-y divide-line">
-                {projects.map((project) => (
-                  <Reveal key={project.title}>
-                    <ProjectItem project={project} />
-                  </Reveal>
-                ))}
-              </div>
-            </Section>
-          )}
+        {projects.length > 0 && (
+          <Section id="projects" title="Projects" icon={FolderGit2} tone="band">
+            <div className="divide-y divide-line">
+              {projects.map((project) => (
+                <Reveal key={project.title}>
+                  <ProjectItem project={project} />
+                </Reveal>
+              ))}
+            </div>
+          </Section>
+        )}
 
-          {education.length > 0 && (
-            <Section id="education" title="Education" icon={GraduationCap}>
-              <Reveal>
-                <EducationList education={education} certifications={certifications} />
-              </Reveal>
-            </Section>
-          )}
+        {education.length > 0 && (
+          <Section id="education" title="Education" icon={GraduationCap}>
+            <Reveal>
+              <EducationList education={education} certifications={certifications} />
+            </Reveal>
+          </Section>
+        )}
 
-          {skillGroups.length > 0 && (
-            <Section id="skills" title="Technical skills" icon={Code}>
-              <Reveal>
-                <SkillGroups groups={skillGroups} />
-              </Reveal>
-            </Section>
-          )}
-        </div>
+        {skillGroups.length > 0 && (
+          <Section id="skills" title="Technical skills" icon={Code} tone="band">
+            <Reveal>
+              <SkillGroups groups={skillGroups} />
+            </Reveal>
+          </Section>
+        )}
       </main>
 
       <SiteFooter name={intro.name} contactEmail={intro.contactEmail} socialLinks={socialLinks} />
