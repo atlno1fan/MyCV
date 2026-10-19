@@ -1,10 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
 /* Design tokens. Violet is the accent in both palettes and the neutrals carry a trace of it.
    The light palette is the default; the dark one follows the visitor's system preference.
-   Components only ever use the token names (see tailwind.config.ts). */
+   Components only ever use the token names declared in the @theme block below. */
 :root {
   color-scheme: light;
   --c-surface: 250 250 252;
@@ -33,6 +31,22 @@
   }
 }
 
+/* The Tailwind theme: colours resolve through the tokens above, so one set of classes renders both palettes. */
+@theme {
+  --color-surface: rgb(var(--c-surface));
+  --color-surface-2: rgb(var(--c-surface-2));
+  --color-ink: rgb(var(--c-ink));
+  --color-ink-2: rgb(var(--c-ink-2));
+  --color-muted: rgb(var(--c-muted));
+  --color-line: rgb(var(--c-line));
+  --color-accent: rgb(var(--c-accent));
+  --color-accent-strong: rgb(var(--c-accent-strong));
+  --color-accent-ink: rgb(var(--c-accent-ink));
+  --font-sans: 'Source Sans 3 Variable', system-ui, sans-serif;
+  --font-serif: 'Source Serif 4 Variable', Georgia, serif;
+  --container-content: 72rem;
+}
+
 /* Anchor navigation glides between sections unless the visitor prefers reduced motion. */
 @media (prefers-reduced-motion: no-preference) {
   html {
@@ -53,7 +67,7 @@
 @layer components {
   .btn {
     @apply inline-flex items-center gap-2 rounded-md px-4 py-2.5 text-sm font-medium transition-colors;
-    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface;
+    @apply focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface;
   }
   .btn-primary {
     @apply bg-accent text-accent-ink hover:bg-accent-strong;

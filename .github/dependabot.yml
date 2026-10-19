@@ -9,12 +9,9 @@ updates:
       monthly-updates:
         patterns: ['*']
         update-types: [minor, patch]
-    # Major versions of these change how the site is built or rendered (Tailwind 4 replaces the
-    # config and PostCSS setup; React 19 changes the types and the test tooling). They are
-    # deliberate migrations, not routine bumps, so Dependabot leaves them alone.
+    # A React major changes the types and the test tooling, so it is a deliberate migration,
+    # not a routine bump; Dependabot leaves it alone.
     ignore:
-      - dependency-name: tailwindcss
-        update-types: ['version-update:semver-major']
       - dependency-name: react
         update-types: ['version-update:semver-major']
       - dependency-name: react-dom
